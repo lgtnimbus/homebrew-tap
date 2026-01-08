@@ -5,23 +5,23 @@
 class Lgtctl < Formula
   desc ""
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/1.1.0/lgtctl_1.1.0_darwin_amd64.tar.gz"
-      sha256 "34fe10c6bf7b71ded0f8b2bd6e31e3776f2b82ff6ca2aaaaa5c1a2fb3c06f287"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.1/lgtctl_1.1.1_darwin_amd64.tar.gz"
+      sha256 "952fac93ad7906d1b6c7e7c206e7080784fdf26ba2caa6e3d097a967699e4cdf"
 
       def install
         bin.install "lgtctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/1.1.0/lgtctl_1.1.0_darwin_arm64.tar.gz"
-      sha256 "9f725ffe0e4ecdc892a4f17875a0a5509695d9e3765415d2f914635ae1b7aade"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.1/lgtctl_1.1.1_darwin_arm64.tar.gz"
+      sha256 "377a4f07fd75980b5668233f11a7d0f754f1b48ab2046928e657b9e06cc9eac4"
 
       def install
         bin.install "lgtctl"
@@ -31,15 +31,15 @@ class Lgtctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/1.1.0/lgtctl_1.1.0_linux_amd64.tar.gz"
-      sha256 "392d2a62b2fb01de4155199450f0660441683abc924512cdfa5749d8773870da"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.1/lgtctl_1.1.1_linux_amd64.tar.gz"
+      sha256 "8edeec3984fce7651a84df27be461d87cc635fec1f1d5404298cab236dcace0c"
       def install
         bin.install "lgtctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/1.1.0/lgtctl_1.1.0_linux_arm64.tar.gz"
-      sha256 "8fe216403c872a04cef4a528d4335cd3e264ea7d0b0efd60d81dd66810574286"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.1/lgtctl_1.1.1_linux_arm64.tar.gz"
+      sha256 "aed0f63de4133bac65129b5a2da5781ab10e9a4fc102c8d7c42b0026551659c9"
       def install
         bin.install "lgtctl"
       end
