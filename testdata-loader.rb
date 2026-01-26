@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class IsynthCli < Formula
+class TestdataLoader < Formula
     desc "single binary cli for loading synthetic test data into kafka and postgres"
     homepage ""
     version "0.21.6"
