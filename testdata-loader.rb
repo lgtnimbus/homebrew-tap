@@ -16,7 +16,7 @@ class TestdataLoader < Formula
         sha256 "14fd8c88f4dae4ebca652a7e34daa93d955e145b97d03dda098f2398267f75fc"
   
         def install
-          bin.install "" => "testdata-loader"
+          bin.install "testdata-loader-v0.21.6-darwin-arm64" => "testdata-loader"
         end
       end
       if Hardware::CPU.intel?
@@ -24,7 +24,7 @@ class TestdataLoader < Formula
         sha256 "bbac1a5c67a531009d4b52ca9ea1e23de0713183ca5cd7f74bc08f0976092bc3"
   
         def install
-          bin.install "" => "testdata-loader"
+          bin.install "testdata-loader-v0.21.6-darwin-amd64" => "testdata-loader"
         end
       end
     end
@@ -35,7 +35,7 @@ class TestdataLoader < Formula
             sha256 "c63438f205b8e86bad82e88e65b856b3f0b24f074addb85411931ba51a6cfe52"
          
             def install
-                bin.install "" => "testdata-loader"
+                bin.install "testdata-loader-v0.21.6-linux-arm64" => "testdata-loader"
             end
         end
         # homebrew on linux does not support ARM
@@ -44,7 +44,7 @@ class TestdataLoader < Formula
             sha256 "07e1a63d2f27724f248a0e7bc1109dbc96ca9ea262915bfa1ce28099a8d961c6"
     
             def install
-                bin.install "" => "testdata-loader"
+                bin.install "testdata-loader-v0.21.6-linux-amd64" => "testdata-loader"
             end
         end
     end
