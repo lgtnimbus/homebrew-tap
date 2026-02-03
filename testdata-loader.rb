@@ -4,7 +4,7 @@
 class TestdataLoader < Formula
     desc "single binary cli for loading synthetic test data into kafka and postgres"
     homepage ""
-    version "0.21.6"
+    version "1.0.0"
     license "proprietary"
   
     # depends_on "helm"
@@ -12,39 +12,39 @@ class TestdataLoader < Formula
   
     on_macos do
       if Hardware::CPU.arm?
-        url "https://github.com/lgtnimbus/testdata-loader/releases/download/v0.21.6/testdata-loader-v0.21.6-darwin-arm64"
-        sha256 "14fd8c88f4dae4ebca652a7e34daa93d955e145b97d03dda098f2398267f75fc"
+        url "https://github.com/lgtnimbus/testdata-loader/releases/download/v1.0.0/testdata-loader-darwin-arm64"
+        sha256 "973139b1d67daca5eaba690b96d2affb5f0812ba26e31706a33ba576223f288a"
   
         def install
-          bin.install "testdata-loader-v0.21.6-darwin-arm64" => "testdata-loader"
+          bin.install "testdata-loader-darwin-arm64" => "testdata-loader"
         end
       end
       if Hardware::CPU.intel?
-        url "https://github.com/lgtnimbus/testdata-loader/releases/download/v0.21.6/testdata-loader-v0.21.6-darwin-amd64"
-        sha256 "bbac1a5c67a531009d4b52ca9ea1e23de0713183ca5cd7f74bc08f0976092bc3"
+        url "https://github.com/lgtnimbus/testdata-loader/releases/download/v1.0.0/testdata-loader-darwin-amd64"
+        sha256 "16770412aac4486b441721493f3e47c6c4d156c3afc2d7100bed17095a873225"
   
         def install
-          bin.install "testdata-loader-v0.21.6-darwin-amd64" => "testdata-loader"
+          bin.install "testdata-loader-darwin-amd64" => "testdata-loader"
         end
       end
     end
   
     on_linux do
         if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-            url "https://github.com/lgtnimbus/testdata-loader/releases/download/v0.21.6/testdata-loader-v0.21.6-linux-arm64"
-            sha256 "c63438f205b8e86bad82e88e65b856b3f0b24f074addb85411931ba51a6cfe52"
+            url "https://github.com/lgtnimbus/testdata-loader/releases/download/v1.0.0/testdata-loader-linux-arm64"
+            sha256 "82740ee3286fdfd9aa47522680e3c2c795c229bb010069173685c505fb840ae9"
          
             def install
-                bin.install "testdata-loader-v0.21.6-linux-arm64" => "testdata-loader"
+                bin.install "testdata-loader-linux-arm64" => "testdata-loader"
             end
         end
         # homebrew on linux does not support ARM
         if Hardware::CPU.intel?
-            url "https://github.com/lgtnimbus/testdata-loader/releases/download/v0.21.6/testdata-loader-v0.21.6-linux-amd64"
-            sha256 "07e1a63d2f27724f248a0e7bc1109dbc96ca9ea262915bfa1ce28099a8d961c6"
+            url "https://github.com/lgtnimbus/testdata-loader/releases/download/v1.0.0/testdata-loader-linux-amd64"
+            sha256 "f43e933e34efa8b31f8087d5ae61dfab8b6086727f39d96c81eb87064029325d"
     
             def install
-                bin.install "testdata-loader-v0.21.6-linux-amd64" => "testdata-loader"
+                bin.install "testdata-loader-linux-amd64" => "testdata-loader"
             end
         end
     end
