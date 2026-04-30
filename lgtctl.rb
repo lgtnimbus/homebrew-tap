@@ -5,25 +5,25 @@
 class Lgtctl < Formula
   desc ""
   homepage ""
-  version "1.1.5"
+  version "1.2.0"
 
   depends_on "helm"
   depends_on "kubernetes-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.5/lgtctl_1.1.5_darwin_amd64.tar.gz"
-      sha256 "ae080151b442ea0184a0212188a7e15625bc4aea69aaa823269b45ec8fa24c45"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.2.0/lgtctl_1.2.0_darwin_amd64.tar.gz"
+      sha256 "aa0ea8fba3638016e04ba2e364613c2f7a22d2cbbfdf5873d7bf80421a1d56fd"
 
-      def install
+      define_method(:install) do
         bin.install "lgtctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.5/lgtctl_1.1.5_darwin_arm64.tar.gz"
-      sha256 "1a5532b6f39858f704d323911ae3a99d74434003dfb7029866b2e8ad8531c810"
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.2.0/lgtctl_1.2.0_darwin_arm64.tar.gz"
+      sha256 "ed28dcdf9d17fb50dc368ec30aa4cf7e670ad31aa44b073fad6753d512730f63"
 
-      def install
+      define_method(:install) do
         bin.install "lgtctl"
       end
     end
@@ -31,16 +31,16 @@ class Lgtctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.5/lgtctl_1.1.5_linux_amd64.tar.gz"
-      sha256 "78ac0925f0debb91fb235ce94ae94d2cf5a9483e9e8e9c9656be4d4d2f9d6520"
-      def install
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.2.0/lgtctl_1.2.0_linux_amd64.tar.gz"
+      sha256 "54f6e0497d2e74ed72b0c8cae83fbb2c797bde90419f22cff862121eed32df7c"
+      define_method(:install) do
         bin.install "lgtctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.1.5/lgtctl_1.1.5_linux_arm64.tar.gz"
-      sha256 "77a7484bb0ed330a370bb2d99e6be6856ae4887bd3f7913c7338d9b692b1292f"
-      def install
+      url "https://github.com/lgtnimbus/lgtctl/releases/download/v1.2.0/lgtctl_1.2.0_linux_arm64.tar.gz"
+      sha256 "d3aa77b80dd1b92a7ccf2825c77d91044316bf06e2cf8d71f88d145d1fb3e748"
+      define_method(:install) do
         bin.install "lgtctl"
       end
     end
